@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Memoriando: juego de memoria con tarjetas, sonidos y temporizador.">
+<title>Memoriando | Ejercita tu mente</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<header class="encabezado">
+  <!-- Coloca aquí tu logo: reemplaza el texto LOGO por <img src="img/logo.png" alt="Logo UAEMex" width="90"> -->
+  <div class="logo-espacio" role="img" aria-label="Espacio reservado para el logo">LOGO</div>
+  <div class="titulo-sitio"><h1>Ejercita tu mente</h1><p>Juegos de memoria para estudiantes de preparatoria</p></div>
+  <nav aria-label="Menú principal">
+    <a href="index.html">Inicio</a>
+    <a href="memoria.html" class="activo" aria-current="page">Memoriando</a>
+    <a href="crucigrama.html">Crucigrama</a>
+    <a href="sopa.html">Sopa de letras</a>
+  </nav>
+</header>
+<main>
+  <h2 class="titulo-juego">🧠 Memoriando 🃏</h2>
+  <p class="subtitulo">¡Encuentra todas las parejas antes de que se acabe el tiempo!</p>
+
+  <section class="panel" id="seccion-menu" aria-labelledby="t-menu">
+    <h3 id="t-menu" style="text-align:center;color:#00693E">Configura tu partida</h3>
+    <div class="menu">
+      <div><label for="dificultad">Dificultad</label>
+        <select id="dificultad"><option value="facil">Fácil</option><option value="medio">Medio</option><option value="dificil">Difícil</option></select></div>
+      <div><label for="num-cartas">Número de tarjetas</label><select id="num-cartas"></select></div>
+      <div><label for="tema">Temática</label>
+        <select id="tema"><option value="frutas">🍎 Frutas</option><option value="animales">🐶 Animales</option><option value="musica">🎸 Música</option></select></div>
+      <div><label for="t-memorizar">Tiempo para memorizar</label>
+        <select id="t-memorizar"><option value="3">3 segundos</option><option value="5" selected>5 segundos</option><option value="10">10 segundos</option></select></div>
+      <div><label for="limite">Límite de tiempo</label>
+        <select id="limite"><option value="0">Sin límite</option><option value="30">30 segundos</option><option value="60" selected>60 segundos</option><option value="90">90 segundos</option><option value="120">120 segundos</option></select></div>
+      <div><label for="sonido">Sonido</label>
+        <select id="sonido"><option value="1">Activado</option><option value="0">Desactivado</option></select>
+        <label for="volumen" style="margin-top:8px">Volumen</label>
+        <input type="range" id="volumen" min="10" max="100" value="60"></div>
+    </div>
+    <p class="mensaje error" id="error" aria-live="polite"></p>
+    <div class="botonera"><button class="boton" id="btn-jugar">¡Jugar!</button></div>
+  </section>
+
+  <section class="panel oculto" id="seccion-juego" aria-label="Tablero de juego">
+    <div class="info-juego">
+      <span class="reloj" id="reloj" aria-live="off">⏱ 00:00</span>
+      <span id="estado" aria-live="polite">Memoriza las tarjetas</span>
+      <span id="aciertos">Parejas: 0</span>
+    </div>
+    <div class="tablero" id="tablero"></div>
+  </section>
+</main>
+
+<div class="fin oculto" id="fin" role="dialog" aria-modal="true" aria-labelledby="fin-titulo">
+  <div class="fin-caja">
+    <h2 id="fin-titulo"></h2>
+    <p id="fin-texto"></p>
+    <div class="botones">
+      <button class="boton" id="btn-seguir">Seguir jugando</button>
+      <a class="boton oro" href="index.html">Volver a la página principal</a>
+    </div>
+  </div>
+</div>
+<footer class="pie">
+  <p>Código desarrollado por:</p>
+  <ul>
+    <li><strong>Diana</strong> – Juego de memoria</li>
+    <li><strong>Carlos</strong> – Crucigrama</li>
+    <li><strong>Dylan</strong> – Sopa de letras</li>
+  </ul>
+</footer>
+<script src="js/memoria.js"></script>
+</body>
+</html>

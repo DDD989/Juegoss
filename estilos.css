@@ -1,0 +1,80 @@
+:root{--verde:#00693E;--verde-osc:#004D2C;--oro:#D4A017;--oro-cl:#F5D76E;--crema:#FFF9E6;--texto:#1d2b22}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Segoe UI",Arial,sans-serif;background:var(--crema);color:var(--texto);min-height:100vh;display:flex;flex-direction:column}
+main{flex:1;padding:24px 16px;max-width:1100px;width:100%;margin:0 auto}
+a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid var(--oro);outline-offset:2px}
+/* Encabezado */
+.encabezado{background:var(--verde);color:#fff;border-bottom:6px solid var(--oro);display:flex;flex-wrap:wrap;align-items:center;gap:16px;padding:12px 24px}
+.logo-espacio{width:90px;height:90px;border:3px dashed var(--oro-cl);border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:bold;color:var(--oro-cl);flex-shrink:0}
+.titulo-sitio{flex:1;min-width:200px}
+.titulo-sitio p{margin:2px 0 0;color:var(--oro-cl)}
+.encabezado h1{margin:0;font-size:1.8rem}
+nav{display:flex;flex-wrap:wrap;gap:8px}
+nav a{color:#fff;text-decoration:none;padding:8px 14px;border-radius:20px;border:2px solid transparent}
+nav a:hover{background:var(--oro);color:var(--verde-osc)}
+nav a.activo{background:var(--oro);color:var(--verde-osc);font-weight:bold}
+/* Portada */
+.portada{text-align:center;background:#fff;border:3px solid var(--oro);border-radius:20px;padding:24px;box-shadow:0 6px 16px rgba(0,0,0,.15)}
+.portada h2{color:var(--verde);margin-top:0}
+.imagen-central{font-size:clamp(4rem,12vw,8rem);line-height:1.1;margin:10px 0}
+.recuadro{margin-top:24px;background:var(--verde);border-radius:20px;padding:24px;text-align:center}
+.recuadro h2{color:var(--oro-cl);margin-top:0}
+.fila-tarjetas{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+/* Tarjetas que voltean */
+.tarjeta{background:none;border:none;padding:0;height:260px;perspective:900px;cursor:pointer;font:inherit}
+.interior{position:relative;width:100%;height:100%;transition:transform .6s;transform-style:preserve-3d}
+.tarjeta.volteada .interior{transform:rotateY(180deg)}
+.cara{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:14px;border:4px solid var(--oro)}
+.frente{background:#fff;color:var(--verde)}
+.frente .icono{font-size:4rem}
+.frente h3{margin:6px 0 0;font-size:1.4rem}
+.reverso{background:var(--oro-cl);color:var(--verde-osc);transform:rotateY(180deg);text-align:center}
+.reverso p{margin:0 0 10px;font-size:.95rem}
+.boton{display:inline-block;background:var(--verde);color:#fff;border:2px solid var(--oro);padding:10px 20px;border-radius:25px;font-size:1rem;font-weight:bold;cursor:pointer;text-decoration:none}
+.boton:hover{background:var(--verde-osc)}
+.boton.oro{background:var(--oro);color:var(--verde-osc);border-color:var(--verde)}
+/* Pie */
+.pie{background:var(--verde-osc);color:#fff;border-top:6px solid var(--oro);text-align:center;padding:16px}
+.pie ul{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:12px 30px}
+.pie strong{color:var(--oro-cl)}
+/* Páginas de juegos */
+.panel{background:#fff;border:3px solid var(--oro);border-radius:20px;padding:20px;box-shadow:0 6px 16px rgba(0,0,0,.15)}
+.titulo-juego{text-align:center;color:var(--verde);font-size:clamp(2rem,6vw,3.5rem);margin:0 0 6px;text-shadow:3px 3px 0 var(--oro)}
+.subtitulo{text-align:center;margin:0 0 20px}
+.menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-bottom:20px}
+.menu label{display:block;font-weight:bold;color:var(--verde);margin-bottom:4px}
+.menu select,.menu input[type=range]{width:100%;padding:8px;border:2px solid var(--verde);border-radius:8px;font-size:1rem}
+.mensaje{text-align:center;font-weight:bold;min-height:1.5em}
+.error{color:#b00020}
+.info-juego{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:1.2rem;font-weight:bold;color:var(--verde);margin-bottom:14px}
+.reloj{background:var(--verde);color:var(--oro-cl);padding:6px 18px;border-radius:20px;border:2px solid var(--oro)}
+.oculto{display:none!important}
+.tablero{display:grid;grid-template-columns:repeat(auto-fit,minmax(90px,110px));justify-content:center;gap:12px;max-width:700px;margin:0 auto}
+.carta{background:none;border:none;padding:0;width:100%;height:auto;min-width:0;aspect-ratio:1/1;perspective:700px;cursor:pointer}
+.carta .frente{background:var(--verde);color:var(--oro-cl);font-size:2.5rem}
+.carta .reverso{background:#fff;font-size:clamp(2rem,6vw,3.5rem);transform:rotateY(180deg)}
+.carta.acertada .reverso{background:var(--oro-cl)}
+.fin{position:fixed;inset:0;background:rgba(0,0,0,.65);display:flex;align-items:center;justify-content:center;z-index:10;padding:16px}
+.fin-caja{background:#fff;border:6px solid var(--oro);border-radius:24px;padding:30px;text-align:center;max-width:420px}
+.fin-caja h2{color:var(--verde);font-size:2rem;margin-top:0}
+.fin-caja .botones{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+/* Crucigrama y sopa */
+.cruci{border-collapse:collapse;margin:0 auto 16px}
+.cruci td{width:46px;height:46px;border:2px solid var(--verde);padding:0;position:relative;background:#fff}
+.cruci td.vacia{background:transparent;border-color:transparent}
+.cruci input{width:100%;height:100%;border:none;text-align:center;font-size:1.4rem;font-weight:bold;text-transform:uppercase;background:transparent;color:var(--verde-osc)}
+.cruci .num{position:absolute;top:1px;left:3px;font-size:.7rem;color:#b00020}
+.cruci td.bien{background:#c8f0d2}
+.cruci td.mal{background:#ffd0d0}
+.pistas{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-bottom:16px}
+.pistas h3{color:var(--verde);margin:0 0 6px}
+.botonera{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:10px}
+.sopa{border-collapse:collapse;margin:0 auto 16px;user-select:none}
+.sopa td{width:42px;height:42px;text-align:center;border:1px solid var(--oro);font-weight:bold;font-size:1.2rem;color:var(--verde-osc);cursor:pointer;background:#fff;padding:0}
+.sopa td:hover{background:var(--oro-cl)}
+.sopa td.inicio{background:var(--oro)}
+.sopa td.hallada{background:var(--verde);color:#fff}
+.lista-palabras{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;list-style:none;padding:0}
+.lista-palabras li{background:var(--oro-cl);padding:6px 14px;border-radius:16px;font-weight:bold;border:2px solid var(--oro)}
+.lista-palabras li.hallada{background:var(--verde);color:#fff;text-decoration:line-through}
+@media(max-width:700px){.encabezado{justify-content:center;text-align:center}.cruci td{width:36px;height:36px}.sopa td{width:30px;height:30px;font-size:1rem}}

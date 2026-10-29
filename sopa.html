@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Sopa de letras para practicar la atención y la memoria.">
+<title>Sopa de letras | Ejercita tu mente</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<header class="encabezado">
+  <!-- Coloca aquí tu logo: reemplaza el texto LOGO por <img src="img/logo.png" alt="Logo UAEMex" width="90"> -->
+  <div class="logo-espacio" role="img" aria-label="Espacio reservado para el logo">LOGO</div>
+  <div class="titulo-sitio"><h1>Ejercita tu mente</h1><p>Juegos de memoria para estudiantes de preparatoria</p></div>
+  <nav aria-label="Menú principal">
+    <a href="index.html">Inicio</a>
+    <a href="memoria.html">Memoriando</a>
+    <a href="crucigrama.html">Crucigrama</a>
+    <a href="sopa.html" class="activo" aria-current="page">Sopa de letras</a>
+  </nav>
+</header>
+<main>
+  <section class="panel" aria-labelledby="t-sopa">
+    <h2 id="t-sopa" class="titulo-juego">Sopa de letras</h2>
+    <p class="subtitulo">Haz clic en la primera letra de una palabra y luego en la última.</p>
+    <table class="sopa" id="tablero-sopa" aria-label="Tablero de la sopa de letras"></table>
+    <ul class="lista-palabras" id="lista" aria-label="Palabras por encontrar"></ul>
+    <p class="mensaje" id="mensaje" aria-live="polite"></p>
+    <div class="botonera">
+      <button class="boton" id="btn-nueva">Nueva sopa</button>
+      <a class="boton oro" href="index.html">Volver al inicio</a>
+    </div>
+  </section>
+</main>
+<footer class="pie">
+  <p>Código desarrollado por:</p>
+  <ul>
+    <li><strong>Diana</strong> – Juego de memoria</li>
+    <li><strong>Carlos</strong> – Crucigrama</li>
+    <li><strong>Dylan</strong> – Sopa de letras</li>
+  </ul>
+</footer>
+<script src="js/sopa.js"></script>
+</body>
+</html>

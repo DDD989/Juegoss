@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Tres juegos para practicar la memoria: crucigrama, memorama y sopa de letras.">
+<title>Ejercita tu mente | Juegos de memoria UAEMex</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<header class="encabezado">
+  <!-- Coloca aquí tu logo: reemplaza el texto LOGO por <img src="img/logo.png" alt="Logo UAEMex" width="90"> -->
+  <div class="logo-espacio" role="img" aria-label="Espacio reservado para el logo">LOGO</div>
+  <div class="titulo-sitio"><h1>Ejercita tu mente</h1><p>Juegos de memoria para estudiantes de preparatoria</p></div>
+  <nav aria-label="Menú principal">
+    <a href="index.html" class="activo" aria-current="page">Inicio</a>
+    <a href="memoria.html">Memoriando</a>
+    <a href="crucigrama.html">Crucigrama</a>
+    <a href="sopa.html">Sopa de letras</a>
+  </nav>
+</header>
+<main>
+  <section class="portada" aria-labelledby="t-portada">
+    <h2 id="t-portada">¡Entrena tu cerebro jugando!</h2>
+    <div class="imagen-central" role="img" aria-label="Un cerebro rodeado de niños jugando">👧🧒 🧠 🧒👧</div>
+    <p>Practica tu memoria, atención y lógica con tres juegos divertidos.</p>
+  </section>
+
+  <section class="recuadro" aria-labelledby="t-juegos">
+    <h2 id="t-juegos">Elige tu juego</h2>
+    <div class="fila-tarjetas">
+      <div class="tarjeta" role="button" tabindex="0" aria-label="Crucigrama. Presiona para voltear la tarjeta">
+        <div class="interior">
+          <div class="cara frente"><span class="icono">✏️</span><h3>Crucigrama</h3></div>
+          <div class="cara reverso"><p>Un pasatiempo de palabras cruzadas: lees las pistas y escribes cada respuesta en su lugar de la cuadrícula.</p><a class="boton" href="crucigrama.html">Ir al juego</a></div>
+        </div>
+      </div>
+      <div class="tarjeta" role="button" tabindex="0" aria-label="Juego de memoria. Presiona para voltear la tarjeta">
+        <div class="interior">
+          <div class="cara frente"><span class="icono">🃏</span><h3>Juego de memoria</h3></div>
+          <div class="cara reverso"><p>Voltea las tarjetas de dos en dos y encuentra las parejas iguales recordando dónde está cada dibujo.</p><a class="boton" href="memoria.html">Ir al juego</a></div>
+        </div>
+      </div>
+      <div class="tarjeta" role="button" tabindex="0" aria-label="Sopa de letras. Presiona para voltear la tarjeta">
+        <div class="interior">
+          <div class="cara frente"><span class="icono">🔤</span><h3>Sopa de letras</h3></div>
+          <div class="cara reverso"><p>Una cuadrícula llena de letras donde debes encontrar las palabras escondidas en cualquier dirección.</p><a class="boton" href="sopa.html">Ir al juego</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="pie">
+  <p>Código desarrollado por:</p>
+  <ul>
+    <li><strong>Diana</strong> – Juego de memoria</li>
+    <li><strong>Carlos</strong> – Crucigrama</li>
+    <li><strong>Dylan</strong> – Sopa de letras</li>
+  </ul>
+</footer>
+<script src="js/principal.js"></script>
+</body>
+</html>
